@@ -1,0 +1,94 @@
+/* Login Page Styling */
+.login-body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .login-logo {
+    margin-top: 30px;
+  }
+  
+  .login-gif {
+    margin-top: 60px;
+  }
+  
+  .login-box {
+    border: 2px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .login-cred {
+    margin-top: 0;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #222;
+    color: white;
+    box-sizing: border-box;
+  }
+  
+  .button-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .login-button {
+    padding: 10px 30px;
+    background-color: #fbfbfb;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #c6c6c6;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .login-body {
+      padding: 15px;
+    }
+  
+    .login-box {
+      padding: 20px;
+      margin-top: 20px;
+    }
+  
+    .login-button {
+      flex: 1;
+      min-width: 100px;
+    }
+  }
+  
+  

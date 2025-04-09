@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="script.js" defer></script>
+  <title>Login</title>
+</head>
+<body class="login-body">
+  <div class="login-logo">
+    <img src="logo.jpg" alt="Logo" width="50" height="50" />
+  </div>
+
+  <div class="login-gif">
+    <img src="6.gif" alt="Loading" height="250" width="250" />
+  </div>
+
+  <!-- Login/Signup Box -->
+  <div class="login-box">
+    <div class="login-cred">
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Email" />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Password" />
+      </div>
+
+      <div class="input-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Set Username" />
+      </div>
+
+      <div class="button-container">
+        <button class="login-button" onclick="login()">LOGIN</button>
+        <button class="login-button" onclick="register()">REGISTER</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
