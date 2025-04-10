@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Branch Group</title>
+  <title>Group</title>
   <link rel="stylesheet" href="attendance.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
@@ -15,8 +16,8 @@
   <div class="app-container">
     <!-- Header -->
     <div class="header">
-        <a href="chats.html" class="back-button">&#8592;</a>
-        <h1>[Branch]</h1>
+      <a href="chats.html" class="back-button">&#8592;</a>
+      <h1 id="groupNameHeader" class="clickable-group-name">[Group]</h1>
       <div class="menu-icon">&#8942;</div>
     </div>
 
@@ -41,7 +42,7 @@
         <div class="action-label">Media</div>
       </div>
 
-      <div class="action-wrapper" data-link="attendance-calendar.html">
+      <div class="action-wrapper" id="attendanceLinkWrapper" data-link="#">
         <div class="action-button">
           <span class="material-icons">edit</span>
         </div>
@@ -64,6 +65,29 @@
       </ul>
     </div>
   </div>
+
+  <script>
+    // Extract the group name from the URL
+    function getGroupName() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('group') || 'Unknown';
+    }
+
+    // Set group name in header
+    const groupName = getGroupName();
+    const groupHeader = document.getElementById('groupNameHeader');
+    if (groupHeader) {
+      groupHeader.textContent = groupName;
+    }
+
+    // Set up attendance button to redirect
+    const attendanceLink = document.getElementById('attendanceLinkWrapper');
+    if (attendanceLink) {
+      attendanceLink.addEventListener('click', () => {
+        window.location.href = `attendance-calendar.html?group=${encodeURIComponent(groupName)}`;
+      });
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>

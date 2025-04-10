@@ -11,7 +11,7 @@
   <div class="attendance-container">
     <!-- Header -->
     <div class="attendance-header">
-      <button class="back-button" onclick="history.back()">
+      <button class="back-button" id="backButton">
         <span class="material-icons">arrow_back</span>
       </button>
       <h2 id="attendance-date">Loading...</h2>
@@ -29,7 +29,7 @@
 
     <!-- Save Button -->
     <div class="save-button">
-      <button onclick="saveAttendance()">SAVE</button>
+      <button id="saveAttendanceBtn">SAVE</button>
     </div>
   </div>
 
@@ -37,13 +37,6 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-  <script src="script.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const attendanceDate = sessionStorage.getItem("selectedDate") || "Unknown-Date";
-      document.getElementById("attendance-date").textContent = `${attendanceDate} (DBMS-Branch)`;
-      initAttendancePage(attendanceDate); // From script.js
-    });
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
