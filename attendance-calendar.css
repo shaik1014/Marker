@@ -9,8 +9,9 @@ html, body {
   width: 100%;
   height: 100%;
   background-color: #f2f3f7;
-  overflow: hidden;
+  overflow: hidden; /* important: no scroll */
 }
+
 
 .calendar-container {
   width: 100vw;
@@ -18,11 +19,12 @@ html, body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  border-radius: 0; /* remove rounded corners */
   overflow: hidden;
-  box-shadow: none; /* remove shadow */
+  border-radius: 0;
+  box-shadow: none;
   position: relative;
 }
+
 
   
   .calendar-header {
@@ -47,6 +49,8 @@ html, body {
   
   .calendar-section {
     padding: 20px;
+    flex-shrink: 0;
+    overflow-y: auto;
   }
   
   .calendar-section h3 {
@@ -81,8 +85,9 @@ html, body {
   
   .notes-section {
     padding: 20px;
-    position: relative;
     flex-grow: 1;
+    overflow: hidden;
+    position: relative;
   }
   
   .notes-section h3 {
