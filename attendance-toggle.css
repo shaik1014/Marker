@@ -9,7 +9,7 @@ html, body {
   width: 100%;
   height: 100%;
   background: #f5f7fb;
-  overflow: hidden; /* disables unwanted scroll */
+  overflow: hidden;
 }
 
 .attendance-container {
@@ -21,7 +21,6 @@ html, body {
   border-radius: 0;
   box-shadow: none;
 }
-
 
 
 .attendance-header {
@@ -68,7 +67,6 @@ html, body {
   overflow-y: auto;
   padding: 0 10px;
 }
-
 
 .member-item {
   display: flex;
@@ -138,15 +136,12 @@ input:checked + .toggle-slider:before {
 
 /* Updated action button container */
 .action-buttons {
-  padding: 12px 15px;
+  padding: 15px;
   display: flex;
-  justify-content: center;
-  gap: 12px;
+  justify-content: space-around;
   border-top: 1px solid #ddd;
   background-color: #fff;
-  flex-shrink: 0; /* important: prevents collapsing */
 }
-
 
 .action-buttons button {
   background-color: #007bff;
@@ -164,4 +159,3 @@ input:checked + .toggle-slider:before {
 .action-buttons button:hover {
   background-color: #0056b3;
 }
-
