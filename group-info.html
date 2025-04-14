@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Group</title>
+  <link rel="stylesheet" href="group-info.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <div class="header">
+        <a id="backButton" href="#" class="back-button">&#8592;</a>
+      <h1 id="groupNameHeader" class="clickable-group-name">[Group]</h1>
+      <div class="menu-icon">&#8942;</div>
+    </div>
+
+    <!-- Profile -->
+    <div class="profile-pic">
+      <img id="groupAvatar" src="baldal.jpg" alt="Group Avatar" />
+    </div>
+
+    <!-- Buttons Bar -->
+    <div class="action-bar">
+      <div class="action-wrapper" data-link="#">
+        <div class="action-button">
+          <span class="material-icons">person_add</span>
+        </div>
+        <div class="action-label">ADD+</div>
+      </div>
+
+      <div class="action-wrapper" data-link="#">
+        <div class="action-button">
+          <span class="material-icons">event_note</span>
+        </div>
+        <div class="action-label">Media</div>
+      </div>
+
+      <div class="action-wrapper" id="attendanceLinkWrapper">
+        <div class="action-button">
+          <span class="material-icons">edit</span>
+        </div>
+        <div class="action-label">Attendance</div>
+      </div>
+
+      <div class="action-wrapper" data-link="#">
+        <div class="action-button">
+          <span class="material-icons">cloud</span>
+        </div>
+        <div class="action-label">Material</div>
+      </div>
+    </div>
+
+    <!-- Members List -->
+    <div class="members-section">
+      <h2>Members</h2>
+      <ul id="memberList" class="member-list">
+        <!-- Users from Firebase will be inserted here -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- External JS for dynamic functionality -->
+  <script src="group-info.js"></script>
+</body>
+</html>

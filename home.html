@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Group Chats</title>
+  <link rel="stylesheet" href="home.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <div class="header">
+      <h1 class="active-tab">Chats</h1>
+      <div class="tabs">
+        <button class="tab-button">Events</button>
+        <button class="tab-button">AI</button>
+      </div>
+      <div class="profile-button">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile" />
+      </div>
+    </div>
+
+    <!-- Chats List (will be loaded dynamically) -->
+    <div class="chat-list" id="chatList"></div>
+
+    <!-- Floating Action Button -->
+    <button class="add" id="addGroupBtn"><span class="material-icons">add</span></button>
+
+  </div>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-database-compat.js"></script>
+
+  <!-- Your Script -->
+  <script src="script.js"></script> 
+
+
+<!-- Profile Modal -->
+<div id="profileModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeProfileModal()">&times;</span>
+    <img class="modal-avatar" src="https://ui-avatars.com/api/?name=Profile" alt="Avatar">
+    <h2 id="profileName">Loading...</h2>
+    <p><strong>Username:</strong> <span id="profileUsername">Fetching</span></p>
+    <p><strong>Email:</strong> <span id="profileEmail">Fetching</span></p>
+    <p><strong>Phone:</strong> <span id="profilePhone">Fetching</span></p>
+    <p><strong>Branch:</strong> <span id="profileBranch">Fetching</span></p>
+    <p><strong>Registration ID:</strong> <span id="profileRegId">Fetching</span></p>
+    <p><strong>Role:</strong> <span id="profileRole">Fetching</span></p>
+
+    <div class="modal-buttons">
+      <button onclick="openEditModal()" class="modal-btn edit">Edit</button>
+      <button onclick="logout()" class="modal-btn logout">Logout</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Edit Profile Modal -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeEditModal()">&times;</span>
+    <h2>Edit Profile</h2>
+
+    <label for="editName">Full Name:</label>
+    <input type="text" id="editName" placeholder="Enter full name" />
+
+    <label for="editUsername">Username:</label>
+    <input type="text" id="editUsername" placeholder="Enter username" />
+
+    <label for="editEmail">Email:</label>
+    <input type="email" id="editEmail" placeholder="Enter email" disabled />
+
+    <label for="editPhone">Phone:</label>
+    <input type="text" id="editPhone" placeholder="Enter phone number" />
+
+    <label for="editBranch">Branch:</label>
+    <input type="text" id="editBranch" placeholder="Enter branch" />
+
+    <label for="editRegId">Registration ID:</label>
+    <input type="text" id="editRegId" placeholder="Enter reg ID" />
+
+    <button class="modal-btn save" onclick="saveProfile()">Save</button>
+  </div>
+</div>
+
+
+</body>
+</html>

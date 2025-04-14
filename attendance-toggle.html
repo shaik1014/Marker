@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mark Attendance</title>
+  <link rel="stylesheet" href="attendance-toggle.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="attendance-container">
+    <!-- Header -->
+    <div class="attendance-header">
+      <button class="back-button" id="backButton">
+        <span class="material-icons">arrow_back</span>
+      </button>
+      <h2 id="attendance-date">Loading...</h2>
+    </div>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search" />
+    </div>
+
+    <!-- Member List -->
+    <div class="member-list" id="memberList">
+      <!-- Dynamic user list here -->
+    </div>
+
+    <!-- Buttons -->
+    <div class="action-buttons">
+      <button id="saveAttendanceBtn">SAVE</button>
+      <button id="publishAttendanceBtn">PUBLISH</button>
+    </div>
+  </div>
+
+  <!-- Firebase + Script -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="attendance.js" defer></script>
+</body>
+</html>

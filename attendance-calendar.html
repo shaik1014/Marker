@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendance</title>
+  <link rel="stylesheet" href="attendance-calendar.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div class="calendar-container">
+    <!-- Header -->
+    <div class="calendar-header">
+      <!-- Change this -->
+      <button class="back-button" id="backButton">
+      <span class="material-icons">arrow_back</span>
+      </button>
+
+      <h2>Attendance</h2>
+    </div>
+
+    <!-- Calendar -->
+    <div class="calendar-section">
+      <h3 id="calendar-month"></h3>
+      <div class="calendar-grid">
+        <div class="day">m</div><div class="day">t</div><div class="day">w</div>
+        <div class="day">t</div><div class="day">f</div><div class="day">s</div><div class="day">s</div>
+        <!-- Dates will be dynamically inserted here -->
+      </div>
+    </div>
+
+    <!-- Notes -->
+    <div class="notes-section">
+      <h3>Notes</h3>
+      <div class="no-notes">
+        <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="celebration" />
+        <p>No Notes have been added</p>
+      </div>
+      <button class="add-note"><span class="material-icons">add</span></button>
+    </div>
+  </div>
+
+  <!-- Firebase + Script -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="attendance.js"></script>
+</body>
+</html>
+

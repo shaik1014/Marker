@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Branch Chat</title>
+  <link rel="stylesheet" href="chats.css">
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Top Bar -->
+    <div class="chat-header">
+      <button id="backButton" class="back-btn">←</button>
+      <div class="group-info" id="groupInfoClick">
+        <img id="group-avatar" />
+        <h2 id="group-name"></h2>
+      </div>
+    </div>
+    
+    
+
+    <!-- Chat Messages (to be dynamically filled) -->
+    <div class="chat-messages" id="chat-messages">
+      <!-- Dynamic messages go here -->
+    </div>
+
+    <!-- Input Bar -->
+    <div class="chat-input">
+      <input type="text" id="message-input" placeholder="Type a message..." />
+      <button class="send-btn" id="send-btn">➤</button>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+  <script src="chats.js"></script>
+</body>
+</html>
