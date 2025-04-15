@@ -11,7 +11,7 @@ html, body {
   background-color: #f2f3f7;
   overflow: hidden;
 }
-  
+
 .calendar-container {
   width: 100vw;
   height: 100vh;
@@ -24,6 +24,7 @@ html, body {
   position: relative;
 }
 
+  
   .calendar-header {
     display: flex;
     align-items: center;
@@ -119,7 +120,6 @@ html, body {
     color: #000;
     border-radius: 8px;
   }
-  
   @media (max-width: 600px) {
     .calendar-header h2 {
       font-size: 16px;
